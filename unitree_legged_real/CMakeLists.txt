@@ -18,7 +18,7 @@ else()
   set(ARCH arm64)
 endif()
 
-link_directories(${CMAKE_SOURCE_DIR}/unitree_ros_to_real/unitree_legged_sdk/lib/cpp/${ARCH})
+link_directories(../unitree_legged_sdk/lib/cpp/${ARCH})
 
 set(EXTRA_LIBS -pthread libunitree_legged_sdk.so)
 
@@ -27,7 +27,7 @@ set(CMAKE_CXX_FLAGS "-O3 -fPIC")
 include_directories(
     include
     ${catkin_INCLUDE_DIRS}
-    ${CMAKE_SOURCE_DIR}/unitree_ros_to_real/unitree_legged_sdk/include
+    ../unitree_legged_sdk/include
 )
 
 
